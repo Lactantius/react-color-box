@@ -4,6 +4,7 @@ interface BoxStyle {
   width: string;
   height: string;
   color: string;
+  id?: string;
 }
 
 function Box({ width, height, color }: BoxStyle): JSX.Element {
