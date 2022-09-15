@@ -3,5 +3,6 @@ import { render, screen } from "@testing-library/react";
 import NewBoxForm from "./NewBoxForm";
 
 test("NewBoxForm renders", () => {
-  render(<NewBoxForm />);
+  const addBox = () => null;
+  render(<NewBoxForm add={addBox} />);
 });

@@ -16,3 +16,4 @@ function Box({ width, height, color }: BoxStyle): JSX.Element {
 }
 
 export default Box;
+export type { BoxStyle };
