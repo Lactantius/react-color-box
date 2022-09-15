@@ -16,6 +16,7 @@ function BoxList(): JSX.Element {
 
   return (
     <div className="BoxList">
+      <NewBoxForm add={addBox} />
       {boxen.map((box) => (
         <Box
           key={box.id}
@@ -26,7 +27,6 @@ function BoxList(): JSX.Element {
           remove={removeBox}
         />
       ))}
-      <NewBoxForm add={addBox} />
     </div>
   );
 }

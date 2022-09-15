@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./NewBoxForm.css";
 
 interface BoxFormData {
   width: number;
@@ -58,6 +59,7 @@ function NewBoxForm({ add }: BoxFormArgs): JSX.Element {
         placeholder="color"
         value={formData.color}
         onChange={handleChange}
+        className="NewBoxForm-color-picker"
       />
       <button>New Box</button>
     </form>
