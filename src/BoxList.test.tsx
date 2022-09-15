@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import BoxList from "./BoxList";
 
-test("renders App", () => {
-  render(<App />);
+test("BoxList renders", () => {
+  render(<BoxList />);
 });
