@@ -1,7 +1,18 @@
 import React from "react";
 
-function NewBoxForm(): JSX.Element {
-  return <form className="NewBoxForm">Form</form>;
+interface BoxStyle {
+  width: string;
+  height: string;
+  color: string;
 }
 
-export default NewBoxForm;
+function Box({ width, height, color }: BoxStyle): JSX.Element {
+  return (
+    <div
+      className="Box"
+      style={{ width: width, height: height, backgroundColor: color }}
+    ></div>
+  );
+}
+
+export default Box;

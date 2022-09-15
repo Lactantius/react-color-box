@@ -1,7 +1,7 @@
 import React from "react";
 
-function Box(): JSX.Element {
-  return <div className="Box">Box</div>;
+function NewBoxForm(): JSX.Element {
+  return <form className="NewBoxForm">Form</form>;
 }
 
-export default Box;
+export default NewBoxForm;
