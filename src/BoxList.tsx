@@ -11,14 +11,19 @@ function BoxList(): JSX.Element {
   const addBox = (box: BoxStyle) =>
     setBoxen((oldBoxen) => [...oldBoxen, { ...box, id: uuid() }]);
 
+  const removeBox = (id: string) =>
+    setBoxen((oldBoxen) => oldBoxen.filter((box) => id !== box.id));
+
   return (
     <div className="BoxList">
       {boxen.map((box) => (
         <Box
+          key={box.id}
           width={box.width}
           height={box.height}
           color={box.color}
-          key={box.id}
+          id={box.id}
+          remove={removeBox}
         />
       ))}
       <NewBoxForm add={addBox} />

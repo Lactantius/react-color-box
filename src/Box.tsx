@@ -7,12 +7,19 @@ interface BoxStyle {
   id?: string;
 }
 
-function Box({ width, height, color }: BoxStyle): JSX.Element {
+interface BoxArgs extends BoxStyle {
+  remove: Function;
+}
+
+function Box({ width, height, color, id, remove }: BoxArgs): JSX.Element {
   return (
     <div
       className="Box"
+      id={id}
       style={{ width: width, height: height, backgroundColor: color }}
-    ></div>
+    >
+      <button onClick={() => remove(id)}>X</button>
+    </div>
   );
 }
 
