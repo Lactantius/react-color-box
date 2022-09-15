@@ -4,7 +4,7 @@ import NewBoxForm from "./NewBoxForm";
 
 function BoxList(): JSX.Element {
   const [boxen, setBoxen] = useState([
-    { width: "20px", height: "60px", color: "red" },
+    { width: "20px", height: "60px", color: "#ff0000" },
   ]);
 
   const addBox = (box: BoxStyle) => setBoxen((oldBoxen) => [...oldBoxen, box]);

@@ -6,25 +6,30 @@ interface BoxFormData {
   color: string;
 }
 
-function NewBoxForm({ add }): JSX.Element {
+interface BoxFormArgs {
+  add: Function;
+}
+
+function NewBoxForm({ add }: BoxFormArgs): JSX.Element {
   const INITIAL_FORM_DATA: BoxFormData = {
     width: 0,
     height: 0,
-    color: "",
+    color: "#000000",
   };
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
-  const handleChange = (e: SubmitEvent) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent) => {
+    const { name, value } = e.target as HTMLInputElement;
     setFormData((fData) => ({
       ...fData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e: SubmitEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    add(formData);
+    const { width, height, color } = formData;
+    add({ width: `${width}px`, height: `${height}px`, color: color });
     setFormData(INITIAL_FORM_DATA);
   };
 
