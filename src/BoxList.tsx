@@ -17,16 +17,18 @@ function BoxList(): JSX.Element {
   return (
     <div className="BoxList">
       <NewBoxForm add={addBox} />
-      {boxen.map((box) => (
-        <Box
-          key={box.id}
-          width={box.width}
-          height={box.height}
-          color={box.color}
-          id={box.id}
-          remove={removeBox}
-        />
-      ))}
+      <div className="BoxList-container">
+        {boxen.map((box) => (
+          <Box
+            key={box.id}
+            width={box.width}
+            height={box.height}
+            color={box.color}
+            id={box.id}
+            remove={removeBox}
+          />
+        ))}
+      </div>
     </div>
   );
 }
