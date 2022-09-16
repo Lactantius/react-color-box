@@ -6,7 +6,7 @@ import "./BoxList.css";
 
 function BoxList(): JSX.Element {
   const [boxen, setBoxen] = useState([
-    { width: "20px", height: "60px", color: "#ff0000", id: uuid() },
+    { width: "200px", height: "60px", color: "#ff0000", id: uuid() },
   ]);
 
   const addBox = (box: BoxStyle) =>

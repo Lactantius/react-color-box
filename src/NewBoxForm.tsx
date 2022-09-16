@@ -39,6 +39,7 @@ function NewBoxForm({ add }: BoxFormArgs): JSX.Element {
       <label htmlFor="width">Box Width</label>
       <input
         name="width"
+        id="width"
         type="number"
         placeholder="width"
         value={formData.width}
@@ -47,6 +48,7 @@ function NewBoxForm({ add }: BoxFormArgs): JSX.Element {
       <label htmlFor="height">Box Height</label>
       <input
         name="height"
+        id="height"
         type="number"
         placeholder="height"
         value={formData.height}
@@ -55,6 +57,7 @@ function NewBoxForm({ add }: BoxFormArgs): JSX.Element {
       <label htmlFor="color">Box Color</label>
       <input
         name="color"
+        id="color"
         type="color"
         placeholder="color"
         value={formData.color}

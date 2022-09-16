@@ -14,6 +14,7 @@ exports[`matches snapshot 1`] = `
         Box Width
       </label>
       <input
+        id="width"
         name="width"
         placeholder="width"
         type="number"
@@ -25,6 +26,7 @@ exports[`matches snapshot 1`] = `
         Box Height
       </label>
       <input
+        id="height"
         name="height"
         placeholder="height"
         type="number"
@@ -37,6 +39,7 @@ exports[`matches snapshot 1`] = `
       </label>
       <input
         class="NewBoxForm-color-picker"
+        id="color"
         name="color"
         placeholder="color"
         type="color"
@@ -52,7 +55,7 @@ exports[`matches snapshot 1`] = `
       <div
         class="Box"
         id="123456789"
-        style="width: 20px; height: 60px; background-color: rgb(255, 0, 0);"
+        style="width: 200px; height: 60px; background-color: rgb(255, 0, 0);"
       >
         <button
           class="Box-remove-button"

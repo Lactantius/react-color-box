@@ -11,6 +11,7 @@ exports[`matches snapshot 1`] = `
       Box Width
     </label>
     <input
+      id="width"
       name="width"
       placeholder="width"
       type="number"
@@ -22,6 +23,7 @@ exports[`matches snapshot 1`] = `
       Box Height
     </label>
     <input
+      id="height"
       name="height"
       placeholder="height"
       type="number"
@@ -34,6 +36,7 @@ exports[`matches snapshot 1`] = `
     </label>
     <input
       class="NewBoxForm-color-picker"
+      id="color"
       name="color"
       placeholder="color"
       type="color"
