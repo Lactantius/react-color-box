@@ -1,7 +1,16 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Box from "./Box";
 
-test("Box renders", () => {
-  render(<Box width="50px" height="50px" color="orange" remove={() => null} />);
+const boxDefaults = (
+  <Box width="50px" height="50px" color="#424242" remove={() => null} />
+);
+
+it("renders", () => {
+  render(boxDefaults);
+});
+
+it("matches snapshot", () => {
+  const { asFragment } = render(boxDefaults);
+  expect(asFragment()).toMatchSnapshot();
 });
