@@ -1,4 +1,5 @@
 import React from "react";
+import "./Box.css";
 
 interface BoxStyle {
   width: string;
@@ -18,7 +19,9 @@ function Box({ width, height, color, id, remove }: BoxArgs): JSX.Element {
       id={id}
       style={{ width: width, height: height, backgroundColor: color }}
     >
-      <button onClick={() => remove(id)}>X</button>
+      <button onClick={() => remove(id)} className="Box-remove-button">
+        X
+      </button>
     </div>
   );
 }
